@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
 
-import CreateCardForm from "./components/CreateCardForm";
+import AddMovie from "./pages/AddMovie";
 import "./App.css";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
           </ul>
         </nav>
 
-        <Routes>1
-          <Route path="/add-movie" element={<CreateCardForm />} />
+        <Routes>
+          <Route path="/add-movie" element={<AddMovie/>} />
           <Route path="/" element={<Home />} />
         </Routes>
         

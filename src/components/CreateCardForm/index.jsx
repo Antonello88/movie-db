@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { POST } from "../../utils/http";
 import "./style.css";
-import Modal from "../Modal";
 
-function CreateCardForm() {
+
+function CreateCardForm(setModalVisibility) {
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [poster, setPoster] = useState("");
@@ -23,6 +23,9 @@ function CreateCardForm() {
       genres: unStringifyGenres(genres),
       description,
     });
+    
+    setModalVisibility(true)
+
   };
 
   return (
@@ -81,7 +84,7 @@ function CreateCardForm() {
         />
 
         <input type="submit" value="Send it!"  />
-        <Modal />
+        
       </form>
       
     </div>
